@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<header class="header">
+    <div class="container-fluid px-xl-5">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <div class="logo">
+                    <img src="{% static 'img/nasa-logo.svg' %}" alt="logo">
+                </div>
+            </div>
+
+            <div class="col">
+                <nav class="menu d-flex justify-content-center gap-5">
+                    <a href="#" class="nav-link">Преимущества</a>
+                    <a href="#" class="nav-link">Фотографии</a>
+                </nav>
+            </div>
+
+            <div class="col-auto">
+                <button class="login-btn">Вход</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="main-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="main-text text-center mb-5">
+                    <h1 class="mb-3">Космическое агентство</h1>
+                    <p class="mx-auto">Национальное управление по аэронавтике и исследованию космического пространства —
+                        ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно
+                        президенту США.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+                <div class="row g-4">
+                    <div class="col-12 col-lg-6">
+                        <div class="main-image">
+                            <img src="{% static 'img/earth.png' %}" alt="earth">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6" id="cards">
+                        <div class="cards">
+                            <div class="row g-4 mb-3">
+                                <div class="col-6">
+                                    <div class="cards-card text-center">
+                                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                            <path d="M10.4 19.2C13.02 19.2 15.34 20.46 16.8 22.4H45.6C52.53 22.4 59.1 24.67 63.52 30.56C64.16 31.41 64.16 32.59 63.52 33.44C59.1 39.33 52.53 41.6 45.6 41.6H16.8C15.34 43.54 13.02 44.8 10.4 44.8H9.6V54.4H8C5.349 54.4 3.2 52.25 3.2 49.6V44.8H4C1.791 44.8 0 43.01 0 40.8V23.2C0 20.99 1.789 19.2 3.996 19.2H3.2V14.4C3.2 11.749 5.349 9.6 8 9.6H9.6V19.2H10.4ZM47.64 27.2C47.31 27.2 47.2 27.31 47.2 27.64V36.36C47.2 36.6 47.31 36.8 47.64 36.8C49.61 36.8 51.2 35.21 51.2 33.24V30.76C51.2 28.79 49.61 27.2 47.64 27.2Z"
+                                                  fill="#0B3D91"/>
+                                            <path d="M12.8 54.4H12.91C17.06 54.4 21.04 53.21 24.52 51.21L35.2 44.8H12.8V54.4Z"
+                                                  fill="#C3CDDD"/>
+                                            <path d="M12.8 19.2H35.2L24.52 12.792C21.04 10.703 17.06 9.59998 12.91 9.59998H12.8V19.2Z"
+                                                  fill="#C3CDDD"/>
+                                        </svg>
+                                        <p class="mt-4 mb-0">Спейс шаттлы —пилотируемые корабли</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="cards-card text-center">
+                                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                            <path d="M13.445 31.25C13.1799 30.7908 12.7432 30.4556 12.231 30.3183C11.7189 30.1809 11.1731 30.2526 10.7138 30.5175L4.5 34.1012C3.91831 34.4346 3.41019 34.8824 3.00629 35.4176C2.6024 35.9527 2.31111 36.5642 2.15 37.215C1.83997 38.5055 2.04393 39.8659 2.71875 41.0087L3.26375 41.9512C3.92722 43.0985 5.01903 43.9354 6.29926 44.2781C7.57948 44.6208 8.94339 44.4412 10.0913 43.7788L16.3 40.2C16.5277 40.0688 16.7272 39.8941 16.8873 39.6857C17.0474 39.4774 17.1649 39.2395 17.233 38.9858C17.3012 38.732 17.3187 38.4673 17.2845 38.2068C17.2503 37.9463 17.1651 37.6951 17.0338 37.4675L13.445 31.25Z"
+                                                  fill="#C3CDDD"/>
+                                            <path d="M47.855 55.1L36.09 31.75C36.0614 31.6929 36.0557 31.6271 36.074 31.566C36.0924 31.5049 36.1334 31.4531 36.1888 31.4212L37.2263 30.8225C37.4538 30.6912 37.6533 30.5164 37.8132 30.308C37.9732 30.0996 38.0906 29.8617 38.1586 29.608C38.2266 29.3542 38.244 29.0896 38.2097 28.8291C38.1754 28.5687 38.0901 28.3175 37.9588 28.09L32.0175 17.7987C31.8863 17.5711 31.7116 17.3715 31.5032 17.2114C31.2949 17.0513 31.057 16.9338 30.8033 16.8657C30.5495 16.7976 30.2848 16.7801 30.0243 16.8143C29.7638 16.8485 29.5126 16.9337 29.285 17.065L18.4875 23.29C17.9175 23.6166 17.418 24.053 17.0178 24.5739C16.6176 25.0949 16.3248 25.6901 16.1563 26.325C16.0416 26.7215 15.984 27.1323 15.985 27.545C15.9925 28.495 17.135 30.3825 18.25 32.33C19.4488 34.4237 20.655 36.565 21.5425 37.0987C22.1075 37.4387 23.105 37.7112 23.9438 37.7112H24.0488L14.1338 59.1612C14.0233 59.3997 13.9609 59.6576 13.9502 59.9202C13.9394 60.1828 13.9806 60.445 14.0712 60.6917C14.1619 60.9383 14.3002 61.1648 14.4784 61.3579C14.6566 61.5511 14.8712 61.7073 15.1098 61.8175C15.3483 61.9277 15.6063 61.9898 15.8689 62.0003C16.1315 62.0107 16.3936 61.9693 16.6402 61.8784C16.8868 61.7875 17.1131 61.6489 17.3061 61.4705C17.4991 61.2921 17.655 61.0774 17.765 60.8387L29.475 35.5075C29.5611 35.32 29.7036 35.164 29.8825 35.0612L32.2838 33.6762C32.3132 33.6594 32.3459 33.6487 32.3796 33.6449C32.4134 33.6411 32.4476 33.6442 32.4801 33.654C32.5126 33.6638 32.5428 33.6802 32.5688 33.7021C32.5948 33.7239 32.616 33.7509 32.6313 33.7812L44.2825 56.9062C44.4007 57.1408 44.5639 57.3498 44.7629 57.5213C44.9619 57.6928 45.1926 57.8234 45.4421 57.9057C45.6915 57.988 45.9547 58.0204 46.2167 58.0009C46.4786 57.9815 46.7342 57.9107 46.9688 57.7925C47.2033 57.6743 47.4123 57.5111 47.5838 57.3121C47.7553 57.1131 47.8859 56.8824 47.9682 56.6329C48.0505 56.3835 48.0829 56.1203 48.0635 55.8583C48.044 55.5964 47.9732 55.3408 47.855 55.1062V55.1ZM61.2763 14.4675L55.5113 4.5C54.8459 3.35442 53.7539 2.51901 52.4741 2.17652C51.1944 1.83404 49.8311 2.01237 48.6825 2.6725L37.015 9.395C36.4448 9.72134 35.9452 10.1577 35.545 10.6787C35.1448 11.1997 34.852 11.795 34.6838 12.43C34.5181 12.9654 34.464 13.5291 34.525 14.0862C34.7425 15.6637 36.15 17.8862 37.8263 20.8225C39.5238 23.7887 41.44 27.1325 42.4425 27.8562C43.29 28.4553 44.3022 28.7771 45.34 28.7775C46.2143 28.7778 47.0731 28.5476 47.83 28.11L59.5 21.3837C60.0805 21.0511 60.5878 20.6046 60.9914 20.0711C61.395 19.5375 61.6867 18.9278 61.8488 18.2787C62.1611 16.9822 61.9557 15.615 61.2763 14.4675V14.4675Z"
+                                                  fill="#0B3D91"/>
+                                        </svg>
+                                        <p class="mt-4 mb-0">Лучшее телескопическое оборудование</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-6">
+                                    <div class="cards-card text-center">
+                                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                            <path d="M24 1.10929C24.3905 1.58374 24.6297 2.16438 24.6867 2.77618C24.7437 3.38798 24.616 4.00283 24.32 4.54129C22.0074 8.78719 20.7997 13.5465 20.808 18.3813C20.808 34.4653 33.92 47.4893 50.08 47.4893C52.188 47.4893 54.24 47.2693 56.212 46.8493C56.8165 46.7184 57.4462 46.7684 58.0224 46.9932C58.5986 47.218 59.0958 47.6076 59.452 48.1133C59.828 48.6391 60.0196 49.2744 59.9972 49.9204C59.9748 50.5664 59.7395 51.1868 59.328 51.6853C56.1907 55.539 52.233 58.6441 47.7433 60.774C43.2537 62.904 38.3453 64.0052 33.376 63.9973C14.936 63.9973 0 49.1413 0 30.8373C0 17.0613 8.456 5.24529 20.496 0.237288C21.0958 -0.0161848 21.7616 -0.0682089 22.3934 0.0890304C23.0252 0.24627 23.589 0.604282 24 1.10929V1.10929Z"
+                                                  fill="#C3CDDD"/>
+                                            <path d="M43.176 12.5893C43.2334 12.4161 43.3438 12.2653 43.4918 12.1585C43.6397 12.0516 43.8175 11.9941 44 11.9941C44.1825 11.9941 44.3603 12.0516 44.5082 12.1585C44.6562 12.2653 44.7666 12.4161 44.824 12.5893L46.372 17.2373C47.064 19.3093 48.688 20.9333 50.76 21.6253L55.408 23.1733C55.5812 23.2306 55.732 23.3411 55.8388 23.4891C55.9456 23.637 56.0031 23.8148 56.0031 23.9973C56.0031 24.1798 55.9456 24.3576 55.8388 24.5055C55.732 24.6534 55.5812 24.7639 55.408 24.8213L50.76 26.3693C49.7381 26.7098 48.8095 27.2835 48.0479 28.0452C47.2863 28.8068 46.7125 29.7354 46.372 30.7573L44.824 35.4053C44.7666 35.5785 44.6562 35.7293 44.5082 35.8361C44.3603 35.9429 44.1825 36.0004 44 36.0004C43.8175 36.0004 43.6397 35.9429 43.4918 35.8361C43.3438 35.7293 43.2334 35.5785 43.176 35.4053L41.628 30.7573C41.2875 29.7354 40.7137 28.8068 39.9521 28.0452C39.1905 27.2835 38.2619 26.7098 37.24 26.3693L32.592 24.8213C32.4188 24.7639 32.268 24.6534 32.1612 24.5055C32.0544 24.3576 31.9969 24.1798 31.9969 23.9973C31.9969 23.8148 32.0544 23.637 32.1612 23.4891C32.268 23.3411 32.4188 23.2306 32.592 23.1733L37.24 21.6253C38.2619 21.2848 39.1905 20.711 39.9521 19.9494C40.7137 19.1877 41.2875 18.2592 41.628 17.2373L43.176 12.5893ZM55.452 0.393288C55.4915 0.279393 55.5655 0.180631 55.6637 0.110734C55.7619 0.0408369 55.8795 0.00327723 56 0.00327723C56.1205 0.00327723 56.2381 0.0408369 56.3363 0.110734C56.4345 0.180631 56.5085 0.279393 56.548 0.393288L57.58 3.48929C58.04 4.87329 59.124 5.95729 60.508 6.41729L63.604 7.44929C63.7179 7.48877 63.8167 7.56277 63.8866 7.66098C63.9565 7.75919 63.994 7.87674 63.994 7.99729C63.994 8.11783 63.9565 8.23538 63.8866 8.3336C63.8167 8.43181 63.7179 8.5058 63.604 8.54529L60.508 9.57729C59.826 9.80418 59.2062 10.187 58.6979 10.6952C58.1897 11.2035 57.8069 11.8232 57.58 12.5053L56.548 15.6013C56.5085 15.7152 56.4345 15.8139 56.3363 15.8838C56.2381 15.9537 56.1205 15.9913 56 15.9913C55.8795 15.9913 55.7619 15.9537 55.6637 15.8838C55.5655 15.8139 55.4915 15.7152 55.452 15.6013L54.42 12.5053C54.1931 11.8232 53.8103 11.2035 53.3021 10.6952C52.7938 10.187 52.174 9.80418 51.492 9.57729L48.396 8.54529C48.2821 8.5058 48.1833 8.43181 48.1134 8.3336C48.0435 8.23538 48.006 8.11783 48.006 7.99729C48.006 7.87674 48.0435 7.75919 48.1134 7.66098C48.1833 7.56277 48.2821 7.48877 48.396 7.44929L51.492 6.41729C52.876 5.95729 53.96 4.87329 54.42 3.48929L55.452 0.397288V0.393288Z"
+                                                  fill="#0B3D91"/>
+                                        </svg>
+                                        <p class="mt-4 mb-0">Исследовательские станции на Луне — шаг к новым
+                                            открытиям!</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="cards-card text-center">
+                                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                                            <clipPath id="clip0_1_146">
+                                                <rect fill="white" height="64" width="64"/>
+                                            </clipPath>
+                                            <g clip-path="url(#clip0_1_146)">
+                                                <path d="M48.4 -4.05312e-05H35.6V12.9888C40.1803 13.4922 44.5713 15.0938 48.4 17.6576V-4.05312e-05ZM29.2 -4.05312e-05H16.4V17.6576C20.2288 15.0938 24.6198 13.4922 29.2 12.9888V-4.05312e-05Z"
+                                                      fill="#0B3D91"/>
+                                                <path d="M32.4004 19.2C38.3411 19.2001 44.0385 21.5598 48.2393 25.7605C52.4401 29.9613 54.7998 35.6595 54.7998 41.6003C54.7997 47.5411 52.44 53.2385 48.2393 57.4392C44.0385 61.6399 38.3411 63.9997 32.4004 63.9998C26.4595 63.9998 20.7614 61.64 16.5605 57.4392C12.3599 53.2385 10.0001 47.541 10 41.6003C10 35.6595 12.3597 29.9613 16.5605 25.7605C20.7614 21.5597 26.4595 19.2 32.4004 19.2ZM28.4805 36.739L19.7217 38.0095L26.0605 44.1921L24.5635 52.9187L32.4004 48.7996L40.2402 52.9187L38.7422 44.1921L45.082 38.0095L36.3203 36.739L32.4004 28.7996L28.4805 36.739Z"
+                                                      fill="#C3CDDD"/>
+                                            </g>
+                                        </svg>
+                                        <p class="mt-4 mb-0">Золотая медаль <br>по научным исследованиям</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section" id="photos">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-5">Фотографии</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+                <div class="main-image-container mb-4">
+                    <div class="main-slider">
+                        <div class="slide-item">
+                            <a href="{% static '' %}" data-lightbox="images" data-title="Картинка"><img
+                                    src="{% static '' %}" alt="photo" class="img-fluid rounded"></a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="{% static '' %}" data-lightbox="images" data-title="Картинка"><img
+                                    src="{% static '' %}" alt="photo" class="img-fluid rounded"></a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="{% static '' %}" data-lightbox="images" data-title="Картинка"><img
+                                    src="{% static '' %}" alt="photo" class="img-fluid rounded"></a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="{% static '' %}" data-lightbox="images" data-title="Картинка"><img
+                                    src="{% static '' %}" alt="photo" class="img-fluid rounded"></a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="{% static '' %}" data-lightbox="images" data-title="Картинка"><img
+                                    src="{% static '' %}" alt="photo" class="img-fluid rounded"></a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="{% static '' %}" data-lightbox="images" data-title="Картинка"><img
+                                    src="{% static '' %}" alt="photo" class="img-fluid rounded"></a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="{% static '' %}" data-lightbox="images" data-title="Картинка"><img
+                                    src="{% static '' %}" alt="photo" class="img-fluid rounded"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thumbnail-slider-wrapper">
+                    <div class="thumbnail-slider">
+                        <div class="thumbnail-item">
+                            <img src="{% static '' %}" alt="thumbnail" class="img-fluid rounded">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="{% static '' %}" alt="thumbnail" class="img-fluid rounded">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="{% static '' %}" alt="thumbnail" class="img-fluid rounded">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="{% static '' %}" alt="thumbnail" class="img-fluid rounded">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="{% static '' %}" alt="thumbnail" class="img-fluid rounded">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="{% static '' %}" alt="thumbnail" class="img-fluid rounded">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="{% static '' %}" alt="thumbnail" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="{% static 'js/lightbox-plus-jquery.js' %}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
