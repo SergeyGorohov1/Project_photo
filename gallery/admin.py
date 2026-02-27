@@ -1,16 +1,16 @@
+from adminsortable2.admin import SortableAdminMixin
 from django.contrib import admin
 from django.utils.html import mark_safe
-from gallery.models import Photo
 from easy_thumbnails.files import get_thumbnailer
-from adminsortable2.admin import SortableAdminMixin
+
+from gallery.models import Photo
+
 
 @admin.register(Photo)
 class PhotoAdmin(SortableAdminMixin, admin.ModelAdmin):
     list_display = ["preview", "name"]
     list_filter = ["image__owner"]
     search_fields = ["image__name"]
-
-
 
     def preview(self, obj):
         thumbnailer = get_thumbnailer(obj.image)

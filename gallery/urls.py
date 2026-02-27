@@ -1,6 +1,7 @@
 from django.urls import path
-from gallery.views import index
+
 from gallery.apps import GalleryConfig
+from gallery.views import index
 
 app_name = GalleryConfig.name
 
