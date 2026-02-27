@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/nasa-logo.svg' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,7 +152,7 @@
                             {% for photo in photos %}
                                 <div class="slide-item">
                                     <a href="{{ photo.image.url }}" data-lightbox="images"
-                                       data-title="{{ photo.image.name }}"><img
+                                       data-title="{{ photo.image }}"><img
                                             src="{{ photo.image.url }}" alt="photo" class="img-fluid rounded"></a>
                                 </div>
                             {% endfor %}
@@ -188,5 +189,6 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
 </body>
 </html>

@@ -61,4 +61,9 @@ $(document).ready(function () {
             $('.thumbnail-slider').slick('setPosition');
         }, 250);
     });
+
+    lightbox.option({
+        "showImageNumberLabel": false,
+        "wrapAround": true
+    })
 });
