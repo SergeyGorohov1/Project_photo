@@ -6,8 +6,11 @@ from adminsortable2.admin import SortableAdminMixin
 
 @admin.register(Photo)
 class PhotoAdmin(SortableAdminMixin, admin.ModelAdmin):
-    pass
     list_display = ["preview", "name"]
+    list_filter = ["image__owner"]
+    search_fields = ["image__name"]
+
+
 
     def preview(self, obj):
         thumbnailer = get_thumbnailer(obj.image)
