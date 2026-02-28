@@ -42,4 +42,6 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
+Тестовые изображения для добавления, располагаются по пути media/test_photo.
+
 Приложение будет доступно по адресу http://127.0.0.1:8000/
