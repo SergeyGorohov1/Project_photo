@@ -14,7 +14,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         asNavFor: '.main-slider',
         dots: false,
-        centerMode: false,
+        centerMode: true,
         focusOnSelect: true,
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
