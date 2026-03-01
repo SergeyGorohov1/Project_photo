@@ -14,6 +14,10 @@ body {
     align-items: center;
 }
 
+.mob {
+    display: none;
+}
+
 .logo {
     width: 77px;
     height: 64px;
@@ -142,12 +146,12 @@ body {
     width: 100%;
     height: 100% !important;
     display: block;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .thumbnail-slider-wrapper {
     position: relative;
-    
+
 }
 
 .thumbnail-slider {
@@ -172,7 +176,7 @@ body {
     border-radius: 4px;
     border: 2px solid transparent;
     transition: border-color 0.3s;
-    
+
 }
 
 .thumbnail-slider .slick-current .thumbnail-item img {
@@ -247,15 +251,15 @@ body {
     .header {
         padding: 20px 50px;
     }
-    
+
     .thumbnail-slider-wrapper {
         margin: 0 50px;
     }
-    
+
     .slick-prev {
         left: -50px;
     }
-    
+
     .slick-next {
         right: -50px;
     }
@@ -265,7 +269,7 @@ body {
     .hero-text h1 {
         font-size: 48px;
     }
-    
+
     .earth-image {
         height: 350px;
     }
@@ -275,28 +279,28 @@ body {
     .header {
         padding: 15px 30px;
     }
-    
+
     .menu {
         gap: 30px !important;
     }
-    
+
     .hero-section {
         padding: 60px 0;
     }
-    
+
     .hero-text h1 {
         font-size: 40px;
     }
-    
+
     .earth-image {
         height: 400px;
         margin-bottom: 30px;
     }
-    
+
     .gallery-section {
         padding: 60px 0;
     }
-    
+
     .gallery-section h2 {
         font-size: 36px;
     }
@@ -306,69 +310,88 @@ body {
     .header {
         padding: 15px 20px;
     }
-    
+
     .menu .nav-link {
         font-size: 14px;
     }
-    
+
     .login-btn {
         font-size: 14px;
         padding: 10px 16px;
     }
-    
+
     .hero-section {
         padding: 40px 0;
     }
-    
+
     .hero-text h1 {
         font-size: 32px;
     }
-    
+
     .hero-text p {
         font-size: 16px;
         line-height: 24px;
     }
-    
+
     .earth-image {
         height: 300px;
     }
-    
+
     .advantage-card {
         min-height: 180px;
         padding: 20px 15px;
     }
-    
+
     .advantage-card p {
         font-size: 14px;
         line-height: 20px;
     }
-    
+
     .gallery-section {
         padding: 40px 0;
     }
-    
+
     .gallery-section h2 {
         font-size: 28px;
     }
-    
+
     .thumbnail-slider-wrapper {
         margin: 0 40px;
     }
-    
+
     .slick-prev {
-        left: -40px;
-        width: 40px;
-        height: 40px;
+        display: none !important;
     }
-    
+
     .slick-next {
-        right: -40px;
-        width: 40px;
-        height: 40px;
+        display: none !important;
     }
-    
+
     .thumbnail-slider .thumbnail-item img {
         height: 120px;
+    }
+}
+
+@media (max-width: 594px) {
+    .menu .nav-link{
+        display: none;
+    }
+    .mob {
+        display: flex;
+        align-items: center;
+    }
+    .main-text h1 {
+        font-size: 36px;
+    }
+
+    .main-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cards-card p {
+        font-size: 13px;
+        line-height: 20px;
     }
 }
 
